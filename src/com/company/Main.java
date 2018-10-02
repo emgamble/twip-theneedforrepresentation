@@ -24,7 +24,7 @@ public class Main {
     System.out.println(randm);
     double percent = Math.random();
     int start = (int) percent * wordLength;
-    System.out.println(start);
+    //System.out.println(start);
 
     int count = 0;
 
