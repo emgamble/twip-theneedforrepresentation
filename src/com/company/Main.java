@@ -12,8 +12,8 @@ public class Main {
     String a = wordReader.nextLine();
 
     int wordLength = a.length();
-   // int ascii = a.charAt(0);
-   // System.out.println(ascii);
+    System.out.println("length: " + wordLength);
+
 
 
 
@@ -21,21 +21,23 @@ public class Main {
 
     Random startRandom = new Random();
     int randm = startRandom.nextInt(5);
-    System.out.println(randm);
+    System.out.println("randm: " + randm);
+
     double percent = Math.random();
-    int start = (int) percent * wordLength;
-    //System.out.println(start);
+    System.out.println("percent" + percent );
+    int start = (int) (percent * wordLength);
+    System.out.println("start: " + start);
 
     int count = 0;
 
 
     while (count < wordLength) {
         int AsciiValue = a.charAt(start);
-        System.out.println(AsciiValue);
+        System.out.println("Ascii Value: " + AsciiValue);
         count++;
         start++;
         randm++;
-        if (start > wordLength) {
+        if (start >= wordLength) {
             start = start - wordLength;
         }
 
@@ -46,15 +48,15 @@ public class Main {
 
 
         if (randm == 1)
-           System.out.print(Integer.toBinaryString(AsciiValue - 64));
+           System.out.println(Integer.toString((AsciiValue - 64),2));
         else if (randm == 2)
-            System.out.print(Integer.toOctalString(AsciiValue-64));
+            System.out.println(Integer.toString((AsciiValue-64),8));
         else if (randm == 3)
-            System.out.print(AsciiValue);
+            System.out.println(AsciiValue);
         else if (randm == 4)
-            System.out.print(Integer.toHexString(AsciiValue-64));
+            System.out.println(Integer.toString((AsciiValue-64),16));
         else if (randm == 5)
-            System.out.print(a.charAt(start));
+            System.out.println(a.charAt(start));
 
     }
 
@@ -62,23 +64,8 @@ public class Main {
 
 
 
-       // if (random == 1)
-        //binary
-            //for(int j=0; j<= wordLength; j++)
-                //start = start + 1;
 
 
-
-
-
-        //else if (random == 2)
-        //octal
-        //else if (random == 3)
-        //decimal
-        //else if (random == 4)
-        //hex
-       // else
-        //ASCII
 
 
 
